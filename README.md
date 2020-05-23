@@ -1,3 +1,3 @@
-# Cron-metro-JavaScript
+# Cronometro-JavaScript
 
 Cronômetro feito em javascript

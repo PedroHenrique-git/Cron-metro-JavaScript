@@ -9,7 +9,7 @@
 </h1>
 
 <p align="left">
-    Clonar projeto: git clone https://github.com/PedroHenrique-git/Calculadora-JavaScript.git
+    Clonar projeto: git clone https://github.com/PedroHenrique-git/Cronometro-JavaScript.git
 </p>
 
 ![VISUAL](/imagens/Capturar.PNG)

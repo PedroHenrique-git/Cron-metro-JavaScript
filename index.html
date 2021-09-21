@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Timer</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script defer src="./assets/js/main.js"></script>
+    <link rel="shortcut icon" href="./assets/icons/icon.png" type="image/x-icon">
+    <title>Javascript stopwatch</title>
 </head>
 <body>
-    <div class="botoes">
-        <button id="btn-iniciar" class="btn">Iniciar</button>
-        <button id="btn-pausar" class="btn">Pausar</button>
-        <button id="btn-zerar" class="btn">Zerar</button>
-    </div>
-    <div class="hora">
-        <div id="hora" class="relogio">00:00:00</div> 
-    </div>
-
-    <script src="assets/js/main.js"></script>
+    <main class="main-container">
+        <div class="clock">00:00:00</div>
+        <div class="control-buttons">
+            <button class="btn start">Start</button>
+            <button class="btn stop">Stop</button>
+            <button class="btn pause">Pause</button>
+        </div>
+    </main>
 </body>
 </html>

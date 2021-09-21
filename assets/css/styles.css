@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #13181f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 25rem;
+}
+
+.main-container .clock {
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: .3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-container .control-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.main-container .control-buttons button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 100;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    width: calc(100% / 4);
+}
+
+.main-container .control-buttons button:hover {
+    opacity: .8;
+}
+
+.main-container .control-buttons button.start {
+    background: #75a461;
+}
+
+.main-container .control-buttons button.pause {
+    background: #06060f;
+}
+
+.main-container .control-buttons button.stop {
+    background: #8b1d2b;
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 0 25px;
+    }
+
+    .main-container .clock {
+        font-size: 3rem;
+    }
+
+    .main-container .control-buttons {
+        grid-gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .main-container .control-buttons button {
+        width: 70%;
+    }
+}

@@ -1,43 +1,38 @@
-(function(){
-    function RetornarHora(segundo) {  
-        const data = new Date(segundo * 1000);
-        return data.toLocaleTimeString('pt-BR',{hour12:false,timeZone:'GMT'});
-    }
-    
-    let divHora = document.querySelector('#hora');
-    let segundos = 0;
-    let timer;
-    
-    function iniciaRelogio(){
-        timer = setInterval(() =>{
-            segundos++;
-            divHora.innerHTML = RetornarHora(segundos);
-        },1000);
-        divHora.classList.remove('pausado');
-    }
-    
-    function zeraRelogio() {  
+(function (clock, start, stop, pause) {
+    const clockVisor = document.querySelector(clock);
+    const startBtn = document.querySelector(start);
+    const stopBtn = document.querySelector(stop);
+    const pauseBtn = document.querySelector(pause);
+
+    let seconds = 0;
+    let timer = null;
+
+    const startFn = () => {
+        timer = setInterval(() => {
+            clockVisor.innerText = returnTime(seconds);
+            seconds += 1;
+        }, 1000);
+    };
+
+    const stopFn = () => {
+        seconds = 0;
+        clockVisor.innerText = returnTime(seconds);
         clearInterval(timer);
-        segundos = 0;
-        divHora.innerHTML = RetornarHora(segundos);
-        divHora.classList.remove('pausado');
-    }
-    
-    function pausarRelogio() {  
+    };
+
+    const pauseFn = () => {
         clearInterval(timer);
-        divHora.classList.add('pausado');
-    }
-    
-    document.querySelector('#btn-iniciar').addEventListener('click',function(){
-        iniciaRelogio();
-    });
-    
-    document.querySelector('#btn-pausar').addEventListener('click',function(){
-        pausarRelogio();
-    });
-    
-    document.querySelector('#btn-zerar').addEventListener('click',function(){
-        zeraRelogio();
-    });
-    
-})();
+    };
+
+    const returnTime = (seconds) => {
+        const data = new Date(seconds * 1000);
+        return data.toLocaleTimeString('pt-BR', {
+            hour12: false,
+            timeZone: 'GMT',
+        });
+    };
+
+    startBtn.addEventListener('click', startFn);
+    stopBtn.addEventListener('click', stopFn);
+    pauseBtn.addEventListener('click', pauseFn);
+})('.clock', '.start', '.stop', '.pause');

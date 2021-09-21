@@ -1,25 +1,23 @@
-## Stopwatch
+# javascript stopwatch
 
-<p>A simple stopwatch developed using html, css and a little bit of javaScript to implement stopwatch functionality</p>
+## Description
 
-## Getting Started
+a simple stopwatch developer in javascript
 
-open the index.html file
+### Getting started
 
-## Built With
+you can see the app online here: <https://pedrohenrique-git.github.io/stopwatch-javascript/>
 
-<p align="left">
-    <ul>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Html</a></li>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">Css</a></li>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript">JavaScript</a></li>
-    </ul>
-</p>
+### Dependencies
 
-## Images
+[Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)\
+[Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)\
+[Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-![VISUAL](/imagens/Capturar.PNG)
+### Authors
 
-## License
+Pedro
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+### License
+
+This project is licensed under the [MIT] License - see the [LICENSE.md](LICENSE) file for details
